@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/jomsox/.nvm/versions/node/v20.10.0/bin/node /usr/local/bin/yarn add @openzeppelin
+  /Users/jomsox/.nvm/versions/node/v20.10.0/bin/node /usr/local/bin/yarn add hardhat-contract-sizer
 
 PATH: 
   /usr/local/opt/llvm/bin:/Users/jomsox/.nvm/versions/node/v20.10.0/bin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/jomsox/Library/Application Support/org.dfinity.dfx/bin:/Users/jomsox/.cargo/bin:/Applications/iTerm.app/Contents/Resources/utilities:/Users/jomsox/.foundry/bin:/Users/jomsox/.cyfrin/bin:/Users/jomsox/.local/bin:/Users/jomsox/Library/Python/3.9/bin:/Users/jomsox/.local/bin:/Users/jomsox/Library/Python/3.9/bin
@@ -14,17 +14,8 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@openzeppelin: Request "https://registry.yarnpkg.com/@openzeppelin" returned a 405
-      at params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66154:18)
-      at self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140890:22)
-      at Request.emit (node:events:514:28)
-      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141862:10)
-      at Request.emit (node:events:514:28)
-      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141784:12)
-      at Object.onceWrapper (node:events:628:28)
-      at IncomingMessage.emit (node:events:526:35)
-      at endReadableNT (node:internal/streams/readable:1589:12)
-      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
 
 npm manifest: 
   {
@@ -48,6 +39,9 @@ npm manifest:
       "hardhat-gas-reporter": "^1.0.8",
       "solidity-coverage": "^0.8.0",
       "typechain": "^8.3.0"
+    },
+    "dependencies": {
+      "@openzeppelin/contracts": "^5.2.0"
     }
   }
 
@@ -715,6 +709,11 @@ Lockfile:
       "@nomicfoundation/solidity-analyzer-linux-x64-gnu" "0.1.2"
       "@nomicfoundation/solidity-analyzer-linux-x64-musl" "0.1.2"
       "@nomicfoundation/solidity-analyzer-win32-x64-msvc" "0.1.2"
+  
+  "@openzeppelin/contracts@^5.2.0":
+    version "5.2.0"
+    resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-5.2.0.tgz#bd020694218202b811b0ea3eec07277814c658da"
+    integrity sha512-bxjNie5z89W1Ea0NZLZluFh8PrFNn9DH8DQlujEok2yjsOlraUPKID5p1Wk3qdNbf6XkQ1Os2RvfiHrrXLHWKA==
   
   "@scure/base@~1.1.0", "@scure/base@~1.1.6":
     version "1.1.9"
